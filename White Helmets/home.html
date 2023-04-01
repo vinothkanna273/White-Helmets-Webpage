@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="home.css" />
+    <title>The White Helmets</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+  </head>
+  <body>
+    <section class="header">
+      <nav>
+        <a href="home.html"
+          ><img
+            src="https://media.licdn.com/dms/image/C4E0BAQEobMB8yUVMsg/company-logo_200_200/0/1618458575720?e=1688601600&v=beta&t=DeMfopnkogQ0ldf6Hn6AJNazFSqxYlo0LHH2rVBnP0o"
+        /></a>
+        <div class="nav-links" id="navLinks">
+          <div class="mh-link">
+            <h2>The White<br> Helmets</h2>
+            <i class="fa fa-times" id="fa-times" onclick="hideMenu()"></i>
+          </div>
+          <ul>
+            <li><a href="">HOME</a></li>
+            <li><a href="">ABOUT</a></li>
+            <li><a href="">EVENTS</a></li>
+            <li><a href="">DEPARTMENT</a></li>
+            <li><a href="">CONTACT</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+        <div class="wrapper">
+			<button class="l-btn">
+				<i class="ri-share-line"></i>
+			</button>
+			<ul class="list">
+				<li class="item">
+					<a href="#" class="link ig">
+						<i class="ri-instagram-line"></i>
+					</a>
+				</li>
+				<li class="item" style="--d: 0.25s">
+					<a href="#" class="link tw">
+						<i class="ri-twitter-line"></i>
+					</a>
+				</li>
+				<li class="item" style="--d: 0.5s">
+					<a href="#" class="link sc">
+						<i class="ri-snapchat-line"></i>
+					</a>
+				</li>
+			</ul>
+		</div>
+      </nav>
+      <div class="text-box">
+        <h1>The White Helmets</h1>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. <br />Lorem Ipsum has been the industry's standard dummy
+        </p>
+        <div class="au-btn">
+          <a class="btn" style="text-decoration: none;" href="">
+            <span class="icon">
+              <img src="image/hicon.png" height="50px" />
+            </span>
+            <span class="text">About Us</span>
+        </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- JavaScript code -->
+    <script>
+      var navLinks = document.getElementById("navLinks");
+      function showMenu() {
+        navLinks.style.left = "0";
+      }
+      function hideMenu() {
+        navLinks.style.left = "-100%";
+      }
+      const btnEl = document.querySelector('.l-btn')
+			const toggleOptions = () => {
+				const wrapperEl = document.querySelector('.wrapper')
+				const iconEl = btnEl.querySelector('i')
+
+				wrapperEl.classList.toggle('active')
+
+				if (iconEl.classList.contains('ri-share-line')) {
+					iconEl.classList.replace('ri-share-line', 'ri-close-line')
+				} else {
+					iconEl.classList.replace('ri-close-line', 'ri-share-line')
+				}
+			}
+			btnEl.addEventListener('click', toggleOptions)
+    </script>
+  </body>
+</html>
