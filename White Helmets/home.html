@@ -85,15 +85,16 @@
         </div>
       </div>
     </section>
+    <!-- section 2 -->
     <section class="doodle"></section>
-    <section class="about">
-      <!-- club -->
+    <!-- section 3-->
+    <!-- about club -->
+    <section class="about-club">
       <div class="row">
         <div class="about-col">
           <img src="image/club.png" />
         </div>
         <div class="about-col">
-          <a name="about"></a>
           <h2>About Club</h2>
           <p class="a-p1">
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -107,42 +108,70 @@
           </p>
         </div>
       </div>
-      <!-- College -->
-      <div class="row1">
-        <div class="about-col">
-          <img src="https://micvitc.github.io/assets/img/university.png" />
-        </div>
-        <div class="about-col">
-          <h2>About College</h2>
-          <p class="a-p1">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum is simply dummy text of the printing and
-            typesetting industry. Lorem Ipsum is simply dummy text of the
-            printing and typesetting industry. Lorem Ipsum is simply dummy text
-            of the printing and typesetting industry. Lorem Ipsum is simply
-            dummy text of the printing and typesetting industry.Lorem Ipsum is
-            simply dummy text of the printing and typesetting industry. Lorem
-            Ipsum is simply dummy
-          </p>
+    </section>
+    <!-- section 4 -->
+    <section class="doodle"></section>
+    <!-- section 5 -->
+    <!-- About College -->
+    <a name="about"></a>
+    <section class="about-college">
+      <div class="about-coll">
+        <h2>About Club</h2>
+        <p class="aco-p">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum is simply dummy text of the printing and
+          typesetting industry. Lorem Ipsum is simply dummy text of the printing
+          and typesetting industry. Lorem Ipsum is simply dummy text of the
+          printing and typesetting industry. Lorem Ipsum is simply dummy text of
+          the printing and typesetting industry.Lorem Ipsum is simply dummy text
+          of the printing and typesetting industry. Lorem Ipsum is simply dummy
+        </p>
+      </div>
+      <div class="image-wrapper">
+        <div id="shake-image">
+          <img src="image/waste/1.png" class="shake-image" />
+          <img src="image/waste/2.png" class="shake-image" />
+          <img src="image/waste/3.png" class="shake-image" />
+          <img src="image/waste/4.png" class="shake-image" />
+          <img src="image/waste/5.png" class="shake-image" />
+          <img src="image/waste/6.png" class="shake-image" />
+          <img src="image/waste/7.png" class="shake-image" />
+          <img src="image/waste/8.png" class="shake-image" />
+          <img src="image/waste/9.png" class="shake-image" />
+          <img src="image/waste/10.png" class="shake-image" />
         </div>
       </div>
     </section>
+    <!-- vbhvb -->
+    <section class="doodle"></section>
+    <!-- new try -->
+    <section class="clg-container">
+      <div class="about-coll">
+        <h2>About College</h2>
+        <p class="aco-p">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum is simply dummy text of the printing and
+          typesetting industry. Lorem Ipsum is simply dummy text of the printing
+          and typesetting industry. Lorem Ipsum is simply dummy text of the
+          printing and typesetting industry. Lorem Ipsum is simply dummy text of
+          the printing and typesetting industry.Lorem Ipsum is simply dummy text
+          of the printing and typesetting industry. Lorem Ipsum is simply dummy
+        </p>
+      </div>
+      <div id="shake-image">
+      <img src="image/college/1.png" class="co-object" data-value="-2" />
+      <img src="image/college/2.png" class="co-object" data-value="6" />
+      <img src="image/college/3.png" class="co-object" data-value="4" />
+      <img src="image/college/4.png" class="co-object" data-value="6" />
+      <img src="image/college/5.png" class="co-object" data-value="8" />
+      <img src="image/college/6.png" class="co-object" data-value="-4" />
+      <img src="image/college/7.png" class="co-object" data-value="5" />
+      <img src="image/college/8.png" class="co-object" data-value="-9" />
+      <img src="image/college/9.png" class="co-object" data-value="3" />
+      <img src="image/college/10.png" class="co-object" data-value="7" />
+    </div>
+    </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
     <!--Footer-->
     <section class="footer">
       <h4>About Us</h4>
@@ -151,12 +180,12 @@
         industry. <br />Lorem Ipsum has been the industry's standard dummy
       </p>
       <div class="icons">
-        <i class="fa fa-facebook"></i>
-        <i class="fa fa-twitter"></i>
-        <i class="fa fa-instagram"></i>
-        <i class="fa fa-linkedin"></i>
+        <a href=""><i class="fa fa-facebook"></i></a>
+        <a href=""><i class="fa fa-twitter"></i></a>
+        <a href=""><i class="fa fa-instagram"></i></a>
+        <a href=""><i class="fa fa-linkedin"></i></a>
       </div>
-      <p>Made with <i class="fa fa-heart-o"></i> by Vinoth Kanna</p>
+      <p>Made with <i class="fa fa-heart-o"></i> by VK & MR</p>
     </section>
 
     <!-- JavaScript code -->
@@ -182,6 +211,45 @@
         }
       };
       btnEl.addEventListener("click", toggleOptions);
+
+      const image = document.getElementById("shake-image");
+      // var image=document.getElementsByClassName('shake-image')
+      //Shake the image when the mouse is moved
+      document.addEventListener("mousemove", () => {
+        image.classList.add("shake");
+
+        setTimeout(() => {
+          image.classList.remove("shake");
+        }, 500);
+      });
+      
+      // Shake the image when the page is scrolled
+      document.addEventListener("scroll", () => {
+        image.classList.add("shake");
+
+        setTimeout(() => {
+          image.classList.remove("shake");
+        }, 500);
+      });
+
+      //
+      // parallax shaking
+      document.addEventListener("scroll", parallax);
+document.addEventListener("mousemove", parallax);
+
+function parallax(e) {
+  var scroll_position = window.scrollY;
+  var mouse_x = e.clientX;
+  var mouse_y = e.clientY;
+
+  document.querySelectorAll(".co-object").forEach(function(move) {
+    var moving_value = move.getAttribute("data-value");
+    var x = (mouse_x * moving_value) / 200 ;
+    var y = (mouse_y * moving_value) / 200 ;
+    
+    move.style.transform = "translate(" + x + "px, " + y + "px)";
+  });
+}
     </script>
   </body>
 </html>
