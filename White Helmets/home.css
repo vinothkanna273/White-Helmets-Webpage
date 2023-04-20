@@ -24,6 +24,7 @@ nav {
   padding: 2% 6%;
   justify-content: space-between;
   align-items: center;
+  z-index: 1000;
 }
 nav img {
   width: 150px;
@@ -584,4 +585,18 @@ nav .fa {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #f44336;              /* Handle on hover */
+}
+#particles-section {
+  position: relative;
+  height: 100vh; /* adjust this value to match the height of your section */
+  width: 100%; /* this will make the container width 100% of its parent element */
+  overflow: hidden;
+}
+#particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -10; /* make sure the particle container is on top of other elements */
 }
