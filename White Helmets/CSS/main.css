@@ -8,7 +8,7 @@
 }
 /* Header */
 .header {
-  min-height: 70vh;
+  height: 70vh;
   width: 100%;
   position: relative;
   overflow-x: hidden;
@@ -238,8 +238,64 @@ nav .fa {
 
 
 
+/* cloud transition */
+.bkcloud{
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  height: 120px;
+  background: url("image/cloud/1.png");
+  background-size: 1000px 113px ;
+  opacity: 0.8;
+}
+.cloud1{
+  animation: animate 30s  linear infinite;
+  z-index: 995;
+  animation-delay: 0s;
+}
+@keyframes animate{
+  0%{
+    background-position-x: 0;
+  }
+  100%{
+    background-position-x: 1000px;
+  }
 
-
+}
+.people{
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  height: 84px;
+  background: url("image/cloud/2.png");
+  background-size: 1000px 70px ;
+  z-index: 997;
+}
+.frontcloud{
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  height: 72px;
+  background: url("image/cloud/3.png");
+  filter: brightness(65%);
+  background-size: 1000px 74px ;
+}
+.cloud2{
+  animation: animate1 30s  linear infinite;
+  z-index: 1000;
+  animation-delay: 0s;
+}
+@keyframes animate1{
+  0%{
+    background-position-x: 1000px;
+  }
+  100%{
+    background-position-x: 0;
+  }
+}
 
 
 
