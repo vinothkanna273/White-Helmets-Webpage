@@ -1,3 +1,6 @@
+body{
+  overflow-x: hidden;
+}
 .role{
   color: #151515;
   text-align: center;

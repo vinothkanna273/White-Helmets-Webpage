@@ -353,7 +353,7 @@ nav .fa {
 /* section 2 */
 /* doodle */
 .doodle{
-  height: 130px;
+  height: 100px;
   background-image: url("image/doodle3.jpg");
   background-size: cover;
   background-attachment: fixed;
@@ -363,6 +363,7 @@ nav .fa {
 /*about us*/
 .about-club {
   width: 80%;
+  height: 100vh;
   margin: auto;
   background-color: #cecece;
 }
