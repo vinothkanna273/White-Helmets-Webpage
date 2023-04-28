@@ -4,7 +4,7 @@
   padding: 0;
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
-  cursor: url("data:image/svg+xml,%3Csvg width='8mm' height='8mm' viewBox='0 0 8 8' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='4' cy='4' r='3.5' style='fill:%23f44336;opacity:.7;'/%3E%3C/svg%3E"), auto;  
+  cursor: url("data:image/svg+xml,%3Csvg width='6mm' height='6mm' viewBox='0 0 8 8' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='4' cy='4' r='3.5' style='fill:%23f44336;opacity:.7;'/%3E%3C/svg%3E"), auto;  
 }
 /* Header */
 .header {
@@ -174,6 +174,11 @@ nav .fa {
   display: none;
 }
 /* tab view*/
+@media (max-width: 885px) {
+  .text-box h1 {
+    font-size: 45px;
+  }
+}
 @media (max-width: 700px) {
   .nav-links ul li::after,
   .nav-links ul li::before {
@@ -230,11 +235,7 @@ nav .fa {
     display: none;
   }
 }
-@media (max-width: 885px) {
-  .text-box h1 {
-    font-size: 45px;
-  }
-}
+
 
 
 
