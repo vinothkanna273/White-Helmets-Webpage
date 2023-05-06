@@ -350,3 +350,45 @@ nav .fa {
 ::-webkit-scrollbar-thumb:hover {
   background: #f44336;              /* Handle on hover */
 }
+
+/* loader */
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  overflow: hidden;
+  transition: opacity 0.2s, visibility 0.75s;
+  z-index: 1000;
+}
+.loader--hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+.l-text {
+  fill: black;
+  font-family: "Lato", sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-variant-ligatures: none;
+  letter-spacing: 5px;
+  animation: rotate 5s linear infinite;
+  transform-origin: 250px 250px;
+}
+.l-svg {
+  max-width: 50vmin;
+  background: center url("../image/loader.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}

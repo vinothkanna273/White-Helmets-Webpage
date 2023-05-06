@@ -31,6 +31,25 @@
     />
   </head>
   <body>
+    <!--Loader -->
+    <div class="loader">
+      <svg class="l-svg" xmlns="http://www.w3.org/2000/svg" xml:lang="en" xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 0 500 500">
+          <defs>
+              <path id="textcircle" d="M250,400
+                         a150,150 0 0,1 0,-300a150,150 0 0,1 0,300Z" transform="rotate(12,250,250)" />
+          </defs>
+          <g class="textcircle">
+              <text class="l-text" textLength="940">
+                  <textPath xlink:href="#textcircle" aria-label="CSS & SVG are awesome" textLength="940">
+                      Observe&#160;&#160;Contribute&#160;&#160;Change&#160;&#160;
+                  </textPath>
+              </text>
+          </g>
+      </svg>
+      </div>
+    <!-- section 1-->
+    <!-- navbar, Home -->
     <section class="header" id="particles-section">
       <nav>
         <a href="index.html"
@@ -394,6 +413,16 @@
     </section>
 
     <!-- JavaScript code -->
+    <!-- loader -->
+    <script>
+      window.addEventListener("load", () => {
+          const loader = document.querySelector(".loader");
+          loader.classList.add("loader--hidden");
+          loader.addEventListener("transitionend", () => {
+              document.body.removeChild(loader);
+          });
+      });
+  </script>
     <!--particle-->
     <script src="file/particles/particles.js"></script>
     <script src="file/particles/app.js"></script>

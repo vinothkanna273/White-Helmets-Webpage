@@ -7,7 +7,6 @@
   scroll-behavior: smooth;
   cursor: url("data:image/svg+xml,%3Csvg width='6mm' height='6mm' viewBox='0 0 8 8' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='4' cy='4' r='3.5' style='fill:%23f44336;opacity:.7;'/%3E%3C/svg%3E"), auto;  
 }
-
 .header {
   min-height: 100vh;
   width: 100%;
@@ -867,6 +866,8 @@ nav .fa {
 ::-webkit-scrollbar-thumb:hover {
   background: #f44336;              /* Handle on hover */
 }
+
+/* particle */
 #particles-section {
   position: relative;
   height: 100vh; /* adjust this value to match the height of your section */
@@ -881,3 +882,46 @@ nav .fa {
   width: 100%;
   z-index: -10; /* make sure the particle container is on top of other elements */
 }
+
+/* loader */
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  overflow: hidden;
+  transition: opacity 0.2s, visibility 0.75s;
+  z-index: 1000;
+}
+.loader--hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+.l-text {
+  fill: black;
+  font-family: "Lato", sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-variant-ligatures: none;
+  letter-spacing: 5px;
+  animation: rotate 5s linear infinite;
+  transform-origin: 250px 250px;
+}
+.l-svg {
+  max-width: 50vmin;
+  background: center url("image/loader.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
