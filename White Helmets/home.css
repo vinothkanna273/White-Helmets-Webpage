@@ -143,11 +143,16 @@ nav img {
   );
 }
 .tw:hover {
-  background-color: #1da1f2;
+  background-color: #0061be;
 }
 .sc:hover {
-  background-color: #fffc00;
-  color: inherit;
+  background-image: conic-gradient(
+    #ff4131 0%,
+    #ffbf00 25%,
+    #34a853 50%,
+    #4285f4 75%,
+    #ff4131 90%
+  );
 }
 /* section 1*/
 /* s1 text box */
@@ -237,6 +242,9 @@ nav .fa {
   .nav-links ul li {
     display: block;
   }
+  .nav-links ul li a:hover {
+    color: #000;
+  }
   .nav-links ul li a {
     font-size: 18px;
   }
@@ -293,7 +301,7 @@ nav .fa {
   height: 120px;
   background: url("image/cloud/1.png");
   background-size: 1000px 113px ;
-  opacity: 0.8;
+  opacity: 0.5;
 }
 .cloud1{
   animation: animate 30s  linear infinite;
@@ -326,7 +334,7 @@ nav .fa {
   width:100%;
   height: 72px;
   background: url("image/cloud/3.png");
-  filter: brightness(65%);
+  filter: brightness(90%);
   background-size: 1000px 74px ;
 }
 .cloud2{
@@ -757,8 +765,8 @@ nav .fa {
 .card{
   position: relative;
   border: 0px solid black;
-  padding: 5px;
-  width: 239px;
+  padding: 5px 15px;
+  width: 250px;
   height: 145px;
   border-radius: 2px;
   text-align: center;
@@ -784,18 +792,23 @@ nav .fa {
   position: relative;
   width: 20px;
   color:#f44336;  
+  transition: 0.3s ease;
 }
 .cardc i{
   position: relative;
   color:#f44336;  
+  transition: 0.3s ease;
+}
+.card:hover i, .cardc:hover i{
+  transform: scale(1.2);
 }
 .content{
-  padding: 24px 20px;
+  padding: 24px 5px;
 }
 .content h3{
   margin: 7px 8px;
 }
-@media only screen and (max-width: 745px)
+@media only screen and (max-width: 1000px)
 { 
   .c-row {
       display: flex;
@@ -849,7 +862,11 @@ nav .fa {
 .fa-copyright {
   color: #f44336;
 }
-
+@media(max-width: 600px){
+  .footer p{
+    padding: 0px 10px;
+  }
+}
 
 /* scrolling */
 ::-webkit-scrollbar {
