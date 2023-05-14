@@ -269,6 +269,9 @@ main {
   background-color: #1da1f2;
   color: inherit;
 }
+.gh1:hover{
+  background-color: #212121;
+}
 @media screen and (min-width: 600px) and (max-width: 650px) {
   .link-r :is(.link1) {
     transform: translate(80px, -60px);
