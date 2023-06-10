@@ -396,7 +396,7 @@ nav .fa {
 }
 .l-svg {
   max-width: 50vmin;
-  background: center url("../image/loader.png");
+  background: center url("../image/loader.svg");
   background-repeat: no-repeat;
   background-size: cover;
 }
